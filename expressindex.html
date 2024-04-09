@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+    <script type="text/javascript" src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>电商平台商家大数据系统-美妆地球</title>
+    <link rel="icon" href="images/icon.png">
+    <ul class="nav clearfix">
+        <li><img src="images/logo.png" style="width:200px ;height: 60px; margin-top: -10px;"></li>
+        <li><a href="首页.html">首页</a></li>
+        <li><a href="index.html">美妆画像</a></li>
+        <li><a href="expressindex.html">美妆地球</a></li>
+        <li><a href="数据分析.html">数据分析</a></li>
+    </ul>
+</head>
+
+<body style="visibility: hidden;" onload="setInitialIframeSrc()">
+    <div class="container-flex" tabindex="0" hidefocus="true">
+        <div class="box-left">
+            <div class="left-top">
+                <div class="current-num">
+                    <div>统计数据量</div>
+                    <p>7,899条</p>
+                </div>
+            </div>
+            <div class="left-center">
+                <div class="title-box">
+                    <h6>平台数据量占比</h6>
+                </div>
+                <div class="chart-box pie-chart">
+                    <div id="pie"></div>
+                    <div>
+                        <div class="pie-data">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="left-bottom" class="select">
+                <div class="title-box">
+                    <h6>TOP10品牌玫瑰图</h6>
+                </div>
+                <div class="chart-box" style="background-color: transparent; border: none;">
+                    <iframe src="玫瑰图.html" width="410px" height="350px" frameborder="0" scrolling="no" id="mf2" style="margin-top:0px;margin-left:-80px;">您当前浏览器不支持iframe插件</iframe>
+    
+                </div>
+            </div>
+        </div>
+        <div class="box-center">
+            <div class="center-top">
+                <h1>美妆地球</h1>
+            </div>
+            <div class="center-center">
+                <div class="weather-box">
+                    <div class="data">
+                        <p class="time" id="time">00:00:00</p>
+                        <p id="date"></p>
+                    </div>
+                    <div class="weather">
+                        <img id="weatherImg" src="images/weather/weather_img01.png" alt="">
+                        <div id="weather">
+                            <p class="active">多云</p>
+                            <p>16-22℃</p>
+                            <p>北京市朝阳区</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="images/line_bg.png" alt="">
+                <div class="select-box">
+                    <ul id="barType" style="margin-top:25px;">
+                        <li class="active" data-value="1" onclick="clickEvent1()">京东</li>
+                        <li data-value="2" onclick="clickEvent2()">唯品会</li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="center-bottom">
+                <div class="chart-box" >
+                    <div id="chart4" ></div>
+                    <script>  
+                        // 这个函数会在页面加载时被调用，设置初始iframe的src  
+                        function setInitialIframeSrc() {  
+                            var iframe = document.getElementById('myIframe');  
+                            // 初始时，设置为唯品会默认页面  
+                            iframe.src = '唯品会地球.html';  
+                        }  
+                          
+                        // 点击事件1的处理函数  
+                        function clickEvent1() {  
+                            var iframe = document.getElementById('myIframe');  
+                            iframe.src = '京东地球.html'; // 假设这是唯品会地球页面的URL  
+                        }  
+                          
+                        // 点击事件2的处理函数  
+                        function clickEvent2() {  
+                            var iframe = document.getElementById('myIframe');  
+                            iframe.src = '唯品会地球.html'; // 假设这是京东地球页面的URL  
+                        }  
+                        </script>
+                    <iframe width="700px" height="600px" frameborder="0" scrolling="no" id="myIframe" style="margin-top:-30px;margin-left: -80px;">您当前浏览器不支持iframe插件</iframe>
+                </div>
+                <div class="city-data">
+                    
+                    <ul class="ranking-box">
+                        <li><span></span>
+                            <p>地区</p>
+                            <p>数量</p>
+                        </li>
+                        <!--                        <li><span>1</span><p>上海</p><p>1sss25(万件)</p></li>-->
+                    </ul>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="box-right">
+            <div class="right-top">
+                <div class="title-box">
+                    <h6 id="barTitle">平台商家品牌数据</h6>
+                    <img class="line-img" src="images/line-blue.png" alt="">
+                    <button data-state=1 id="tabBtn"><img src="images/chart_icon.png" alt=""><span>图表</span></button>
+                </div>
+                <p class="unit">单位：家</p>
+                <div class="chart-box">
+                    <div id="chart3" style="width:100%;height:100%;"></div>
+                </div>
+                <div class="data-box" style="display:none;">
+                    <table class="table1">
+                        <tr>
+                            <td>阿玛尼</td>
+                            <td colspan="3" class="table-data dph-data1">0</td>
+                        </tr>
+                        <tr class="bg-color">
+                            <td >珀莱雅</td>
+                            <td class="table-data dph-data2">0</td>
+                            <td >唯品会珀莱雅</td>
+                            <td class="table-data dph-data5">0</td>
+                        </tr>
+                        <tr>
+                            <td >迪奥</td>
+                            <td class="dph-data4">0</td>
+                            <td>唯品会迪奥</td>
+                            <td class="table-data dph-data8">0</td>
+                        </tr>
+                        <tr class="bg-color">
+                            <td>雅诗兰黛</td>
+                            <td colspan="3" class="table-data dph-data9">0</td>
+                        </tr>
+                        <tr>
+                            <td>海蓝之谜</td>
+                            <td colspan="3" class="table-data dph-data7">0</td>
+                        </tr>
+                    </table>
+                    <table class="table1" style="display:none;">
+                        <tr>
+                            <td>丸美</td>
+                            <td colspan="3" class="table-data mail-data1">1</td>
+                        </tr>
+                        <tr class="bg-color">
+                            <td >欧诗漫</td>
+                            <td class="table-data mail-data2">1</td>
+                            <td>京东欧诗漫</td>
+                            <td class="table-data mail-data7">1</td>
+                        </tr>
+                        <tr>
+                            <td>雅诗兰黛</td>
+                            <td colspan="3" class="mail-data6">1</td>
+                        </tr>
+                        <tr class="bg-color">
+                            <td>珀莱雅</td>
+                            <td colspan="3" class="mail-data3">1</td>
+                        </tr>
+                        <tr>
+                            <td>温碧泉</td>
+                            <td colspan="3" class="table-data mail-data5">1</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="right-center">
+                <div class="title-box">
+                    <p id="switchBtn"><span class="active" data-dataType="income">珀莱雅TOP1销售额</span><img class="line-img" src="images/line-blue.png" alt=""><span data-dataType="expend">购买频次</span></p>
+                    <img class="line-img" src="images/line-blue.png" alt="">
+                    <button id="dateBtn"><img src="images/data_icon.png" alt="">日期</button>
+                </div>
+                <div class="data-box">
+                    <p class="data-number" id="totalProfit">72680.68元</p>
+                    <div class="time-box" id="timeBox">
+                        <div class="time-div">
+                            <input class="time-input" type="text" value="" id="startTime">
+                            <img src="images/selsct_time.png" alt="">
+                        </div>
+                        <div class="time-div end">
+                            <input class="time-input" type="text" value="" id="endTime">
+                            <img src="images/selsct_time.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-bottom">
+                <div class="title-box">
+                    <p id="switchBtn1"><span class="active" data-dataType="income">国家+品牌评分关系图谱</span></p>
+                </div>
+                <div class="data-box">
+                    <div class="settings-box" style="background-color: transparent; border: none;">
+                        <iframe src="关系图.html" width="400px" height="200px" frameborder="0" scrolling="no" name="mf1">您当前浏览器不支持iframe插件</iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="pop-up">
+            <span class="close-pop"></span>
+            <h2 class="title">统计数据量</h2>
+            <div class="pop-data-box">
+                <p>7899条</p>
+            </div>
+        </div>
+
+        <div class="pop-up">
+            <span class="close-pop"></span>
+            <h2 class="title">平台数据量占比</h2>
+            <div class="chart-box pie-chart">
+                <div id="pie1"></div>
+                <div>
+                    <div class="pie-data">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pop-up">
+            <span class="close-pop"></span>
+            <h2 class="title">TOP10品牌玫瑰图</h2>
+        </div>
+
+        <div class="pop-up">
+            <span class="close-pop"></span>
+            <div class="filter-con pop-filters" style="display:flex" data-type="4">
+                <div class="select-pop" tabindex="0" hidefocus="true">
+                    <ul id="barTypes">
+                        <li class="active" data-value="1" onclick="clickEvent1()">京东</li>
+                        <li data-value="2" onclick="clickEvent2()">唯品会</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont-div">
+                <div class="chart-box pop-charts">
+                    <div id="chart4" style="width:100%;height:95%;"></div>
+                </div>
+            </div>
+            <div class="cont-div">
+                <h2 class="title" id="barTitles">平台数据</h2>
+                <button class="btn-class" data-state=1 id="tabBtns"><img src="images/chart_icon.png" alt=""><span>图表</span></button>
+                <div class="chart-box pop-chart">
+                    <div id="chart3s" style="width:100%;height:90%;"></div>
+                </div>
+                <div class="data-box" style="top:25%;width:8.6rem;display:none;">
+                    
+                </div>
+            </div>
+            <div class="cont-div">
+                <h2 class="title" id="titles"></h2>
+                <button class="btn-class" id="dateBtns"><img src="images/data_icon.png" alt="">日期</button>
+                <div class="data-box  pop-time">
+                    <div class="time-box" id="timeBoxs">
+                        <div class="time-div">
+                            <input class="time-input" type="text" value="" id="startTimes">
+                            <img src="images/selsct_time.png" alt="">
+                        </div>
+                        <div class="time-div end">
+                            <input class="time-input" type="text" value="" id="endTimes">
+                            <img src="images/selsct_time.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="pop-data-box" id="totalProfits">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/layer/layer.min.js"></script>
+<script type="text/javascript" src="js/layer/laydate/laydate.js"></script>
+<script src="https://www.jq22.com/jquery/echarts-4.2.1.min.js"></script>
+<script type="text/javascript" src="js/china.js"></script>
+<script type="text/javascript" src="js/data/guangdong.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript">
+    $('document').ready(function () {
+        $("body").css('visibility', 'visible');
+        var localData = [$('#teacher').val(), $('#start').val() + '/' + $('#end').val(), $('#leader').val()]
+        localStorage.setItem("data", localData);
+        $('#conBtn').on('click', function () {
+            localData = [$('#teacher').val(), $('#start').val() + '/' + $('#end').val(), $('#leader').val()]
+            if (typeof (Storage) !== "undefined") {
+                localStorage.setItem("data", localData);
+                var arr = localStorage.getItem("data").split(',');
+                $('#name_a').html(arr[0]);
+                $('#date_a').html(arr[1]);
+                $('#lea_a').html(arr[2]);
+            }
+        })
+        $('#fangda').on('click', function () {
+            if ($(this).siblings('ul').is(":hidden")) {
+                $(this).addClass('active').siblings('ul').show();
+            } else {
+                $(this).removeClass('active').siblings('ul').hide();
+            }
+        })
+
+        $('.modal-btn>li').on('click', function () {
+            var index = $(this).index();
+            if (index <= 2) {
+                $('.container').attr('style', 'visibility: visible').find('.pop-up').eq(index).attr('style', 'visibility: visible').siblings().attr('style', 'visibility: hidden');
+            } else if (index > 2 && index < 5) {
+                $('.container').attr('style', 'visibility: visible').find('.pop-up').eq(3).attr('style', 'visibility: visible').siblings().attr('style', 'visibility: hidden');
+                if (index != 3) {
+                    $('.pop-data .ranking-box').hide();
+                } else {
+                    $('.pop-data .ranking-box').show();
+                }
+                $('.cont-div').eq(index - 3).attr('style', 'visibility: visible').siblings('.cont-div').attr('style', 'visibility: hidden');
+            } else if (index == 5) {
+                $('.container').attr('style', 'visibility: visible').find('.pop-up').eq(3).attr('style', 'visibility: visible').siblings().attr('style', 'visibility: hidden');
+                $('.pop-data .ranking-box').hide();
+                if ($('#switchBtn').find('.active').data('datatype') == "income") {
+                    $('#titles').html('珀莱雅TOP1销售额');
+                    $('#totalProfits').html('72680.68元');
+                    $('.cont-div').eq(2).attr('style', 'visibility: visible').siblings('.cont-div').attr('style', 'visibility: hidden');
+                } else if ($('#switchBtn').find('.active').data('datatype') == 'expend') {
+                    $('#titles').html('购买频次');
+                    $('#totalProfits').html('317次');
+                    $('.cont-div').eq(2).attr('style', 'visibility: visible').siblings('div').attr('style', 'visibility: hidden');
+                }
+            }
+        })
+    })
+</script>
+
+
+
+</html>

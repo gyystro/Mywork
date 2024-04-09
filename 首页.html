@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="css/shouye.css" />
+<link rel="stylesheet" href="./css/newscontent.css">
+<link rel="stylesheet" href="./swiper-7.4.1/swiper/swiper-bundle.min.css">
+<title>电商平台商家大数据系统-首页</title>
+<link rel="icon" href="images/icon.png">
+</head>
+<body>
+<div class="wrapin">
+  <!--头部-->
+  <header>
+    <ul class="nav clearfix">
+      <li><a href="首页.html">首页</a></li>
+      <li><a href="index.html">美妆画像</a></li>
+      <li><a href="expressindex.html">美妆地球</a></li>
+      <li><a href="数据分析.html">数据分析</a></li>
+    </ul>
+  </header>
+  <script src="./swiper-7.4.1/swiper/swiper-bundle.min.js"></script>
+  <div class="news__main">
+    <div class="swiper news__swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide news__swiper"><a href="#"><img src="images/轮播1.png" alt=""></a></div>
+            <div class="swiper-slide news__swiper"><a href="#"><img src="images/轮播2.png" alt=""></a></div>
+            <div class="swiper-slide news__swiper"><a href="#"><img src="images/轮播3.jpg" alt=""></a></div>
+            <div class="swiper-slide news__swiper"><a href="#"><img src="images/轮播4.jpg" alt=""></a></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination">
+          <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
+        </div>
+
+        <!-- 如果需要导航按钮 -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+
+        <!-- 如果需要滚动条 -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+    <script>
+        var mySwiper = new Swiper('.swiper', {
+            effect: 'fade',//渐入渐出
+            autoplay: true, // 自动播放
+            autoplay: { delay: 3000 },//每张图片显示的时间
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, //配置点击切换效果
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.next',
+                prevEl: '.prev',
+            },
+
+
+            // 如果需要滚动条
+            //scrollbar: {
+            //  el: '.swiper-scrollbar',
+            //},
+        })
+    </script>
+    <div class="news__content">
+        <ul class="news__tab__list">
+            <li class="news__tab__item news__tab__item--active">最新</li>
+            <!--<li class="news__tab__item">新闻</li> 
+            <li class="news__tab__item">公告</li>
+            <li class="news__tab__item">活动</li>-->
+        </ul>
+        <ul class="news__list">
+            <li>
+                <a href="index.html" class="news__item">
+                    <p class="news__title ellipsis">淘宝美妆销地广东高居榜首！！</p>
+                    <p class="news__date">2024/04/03</p>
+                </a>
+            </li>
+            <li>
+                <a href="expressindex.html" class="news__item">
+                    <p class="news__title ellipsis">京东，唯品会新出地球图</p>
+                    <p class="news__date">2024/04/03</p>
+                </a>
+            </li>
+            <li>
+                <a href="数据分析.html" class="news__item">
+                    <p class="news__title ellipsis">新增美妆评论语义网络分析模型现已上线平台</p>
+                    <p class="news__date">2024/04/04</p>
+                </a>
+            </li>
+            <li>
+                <a href="数据分析.html" class="news__item">
+                    <p class="news__title ellipsis">大部分人对珀莱雅产品持支持态度</p>
+                    <p class="news__date">2024/04/04</p>
+                </a>
+            </li>
+            <li>
+                <a href="expressindex.html" class="news__item">
+                    <p class="news__title ellipsis">戳我查看平台总计数据量</p>
+                    <p class="news__date">2024/04/05</p>
+                </a>
+            </li>
+        </ul>
+        <a href="expressindex.html" class="news__more">查看更多图表</a>
+    </div>
+</div>
+  <div class="con ">
+    <div class="top clearfix">
+      <div class="pic"><img src="images/首页4.jpg" width="100%"/></div>
+      <div class="text">
+        <h2 >关于我们</h2>
+        <br>
+        <P>&nbsp;&nbsp;虽然国内外已经有一些关于电子商务数据可视化的研究，但是对于电商平台商家的可视化分析仍然比较有限。因此，本设计基于面向电商平台商家的用户画像、物流监管可视化以及数据分析的系统，以填补这一研究空白。通过该系统，电子商务平台可以更全面、直观地分析和利用销售数据，提高商品的销售和营销效果，提升用户的购物体验和平台的竞争力。</P>
+      </div>
+    </div>
+    <div class="tupian">
+      <div class="text">&nbsp;&nbsp;该系统可以帮助京东、淘宝、唯品会等电商平台商家实现用户行为特征的分析，以RFM模型、情感分析、决策树，更快地精准提取出产品的用户画像。从而提高销售额和用户体验，对于其他电商平台的数据分析和商业决策也具有一定的参考价值。</div>
+      <ul class="clearfix">
+        <li><img src="images/首页1.jpg"/></li>
+        <li><img src="images/首页2.jpg"/></li>
+        <li><img src="images/首页3.jpg"/></li>
+      </ul>
+  <!--底部-->
+  <img src="images/素材2.gif" style="margin-left:30px;height: 100px;margin-left: 700px;">
+  <footer>
+    <p>电商平台商家大数据系统</p>
+  </footer>
+</div>
+</body>
+</html>
+
+
